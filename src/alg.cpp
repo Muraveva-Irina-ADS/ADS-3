@@ -20,10 +20,9 @@ int cbinsearch(int *arr, int size, int value) {
             }
             first = end;
         }
-        else
-            if (arr[curr] > value)
-                end = curr;
-        else
+        if (arr[curr] > value)
+            end = curr;
+        if (arr[curr] < value)        
             first = curr+1;
     }
     return count;
